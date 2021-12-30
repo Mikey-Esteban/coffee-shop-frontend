@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyleFoodMenu = styled.div`
   min-height: 100vh;
-  width: 400px;
+  width: 480px;
   margin: 0 auto;
   padding-top: 80px;
 
@@ -21,18 +21,18 @@ const StyleFoodMenu = styled.div`
   align-items: center;
 
   h1 {
-    font-size: .8rem;
+    font-size: .9rem;
     font-weight: 600;
   }
 
   h3 {
-    font-size: .7rem;
+    font-size: .8rem;
     line-height: 1.3rem;
     font-weight: 500;
   }
 
   p {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     font-weight: 400;
   }
 `;
@@ -57,7 +57,7 @@ const DescriptionWrapper = styled.div`
 
 const PriceWrapper = styled.div`
   float: right;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   font-weight: 500;
 `;
 

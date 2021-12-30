@@ -4,11 +4,20 @@ import { StyledNavbar } from "./Navbar.styled";
 
 import { Home } from "@styled-icons/fluentui-system-regular/Home";
 
-const Navbar = ({ transparent }) => {
+const Navbar = ({ transparent, setIsNavbarTransparent, activeTab, setActiveTab }) => {
   const history = useHistory();
+
+  if (activeTab !== 'home') {
+    setIsNavbarTransparent(false)
+  }
 
   // handle redirects
   const handleGoToLink = name => {
+    if (name.length === 0) {
+      setActiveTab('home')
+    } else {
+      setActiveTab(name)
+    }
     history.push(`/${name}`);
   };
 

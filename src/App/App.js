@@ -58,6 +58,7 @@ const App = () => {
   const [open, setOpen] = useState(false);
 
   // useState for transparent navbar
+  const [activeTab, setActiveTab] = useState('home')
   const [isNavbarTransparent, setIsNavbarTransparent] = useState(false);
 
   // listener to close burger menu when clicking
@@ -142,14 +143,17 @@ const App = () => {
       return (
         <div ref={node}>
           <Burger open={open} setOpen={setOpen} />
-          <Menu open={open} setOpen={setOpen} />
+          <Menu open={open} setOpen={setOpen}
+            activeTab={activeTab} setActiveTab={setActiveTab} />
         </div>
       );
     } else {
       return (
         <Navbar
           transparent={isNavbarTransparent}
-          handleGoToLink={handleGoToLink}
+          setIsNavbarTransparent={setIsNavbarTransparent}
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
         />
       );
     }
